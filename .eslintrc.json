@@ -1,15 +1,54 @@
 {
-  "root": true,
-  "extends": ["next/core-web-vitals"],
-  "plugins": ["testing-library"],
-  "overrides": [
-    // Only uses Testing Library lint rules in test files
-    {
-      "files": [
-        "**/__tests__/**/*.[jt]s?(x)",
-        "**/?(*.)+(spec|test).[jt]s?(x)"
-      ],
-      "extends": ["plugin:testing-library/react"]
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "standard-with-typescript",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+				"react-hooks",
+        "@typescript-eslint"
+    ],
+    "rules": {
+		"react-hooks/rules-of-hooks": "error",
+	    "react-hooks/exhaustive-deps": "warn",
+	    "react/jsx-filename-extension": [
+	      1,
+	      {
+	        "extensions": [
+	          ".tsx"
+	        ]
+	      }
+	    ],
+	    "import/extensions": [
+	      "error",
+	      "ignorePackages",
+	      {
+	        "ts": "never",
+	        "tsx": "never"
+	      }
+	    ],
+	    "no-use-before-define": "off",
+	    "@typescript-eslint/no-use-before-define": [
+	      "error"
+	    ],
+	    "react/react-in-jsx-scope": "off"
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
     }
-  ]
 }
