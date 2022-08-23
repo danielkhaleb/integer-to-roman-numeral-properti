@@ -5,9 +5,11 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.34.0",
     "next": "latest",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
@@ -17,8 +19,15 @@
     "@testing-library/react": "13.2.0",
     "@testing-library/user-event": "14.2.0",
     "@types/react": "18.0.9",
+    "@typescript-eslint/parser": "^5.34.0",
     "eslint": "^8.22.0",
+    "eslint-config-standard": "^17.0.0",
     "eslint-import-resolver-typescript": "^3.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "28.1.0",
     "jest-environment-jsdom": "28.1.0",
     "typescript": "4.6.4"
