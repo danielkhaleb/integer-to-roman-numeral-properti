@@ -6,10 +6,13 @@ const CalculatorResponse = (
   {
     inputValue,
   }: CalculatorProps): ReactElement => {
+  const romanNumber = convertNumberToRomanNumber(inputValue)
   return (
-    <span>
-      {convertNumberToRomanNumber(inputValue)}
-    </span>
+    <>
+      {romanNumber && <span>
+        Result: <b>{romanNumber}</b>
+      </span>}
+    </>
   );
 }
 
