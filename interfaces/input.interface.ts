@@ -5,9 +5,6 @@ export interface InputComponentProps {
   inputValue: string
 }
 
-export interface OnChangeInputValueProps extends InputComponentProps {}
-
 export interface CheckIfIsToShowMessageErrorProps {
   inputValue: string
-  setIsToShowErrorMessage: Dispatch<SetStateAction<boolean>>,
 }

@@ -1,31 +1,10 @@
-import { CheckIfIsToShowMessageErrorProps, OnChangeInputValueProps } from "interfaces/input.interface"
+import { CheckIfIsToShowMessageErrorProps } from "interfaces/input.interface"
 
 export const validateInputValue = (inputValue: string): boolean => {
-  if (inputValue) {
+  if (!inputValue) return true
     const inputValueNumber = parseInt(inputValue);
     if (inputValueNumber > 0 && inputValueNumber <= 1000) {
-      return false
+      return true
     }
-  }
-  return true
-}
-
-export const checkIfIsToShowMessageError = (
-  {
-    inputValue,
-    setIsToShowErrorMessage
-  }: CheckIfIsToShowMessageErrorProps) => {
-    setIsToShowErrorMessage(false)
-    const valueIsValid = validateInputValue(inputValue);
-    if (valueIsValid) {
-      setIsToShowErrorMessage(true)
-    }
-}
-
-export const onChangeInputValue = (
-  {
-    inputValue,
-    setInputValue,
-  } : OnChangeInputValueProps): void => {
-    setInputValue(inputValue)
+    return false
 }

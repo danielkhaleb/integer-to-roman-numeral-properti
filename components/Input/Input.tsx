@@ -1,4 +1,4 @@
-import { checkIfIsToShowMessageError, onChangeInputValue } from "helpers/input.helper";
+import { validateInputValue } from "helpers/input.helper";
 import { InputComponentProps } from "interfaces/input.interface";
 import { ReactElement, useState } from "react";
 
@@ -14,14 +14,8 @@ const InputComponent = (
         type={"number"}
         value={inputValue}
         onChange={(currentValue) => {
-          onChangeInputValue({
-            inputValue: currentValue.target.value,
-            setInputValue
-          })
-          checkIfIsToShowMessageError({
-            inputValue: currentValue.target.value,
-            setIsToShowErrorMessage
-          })
+          setInputValue(currentValue.target.value)
+          setIsToShowErrorMessage(!validateInputValue(currentValue.target.value))
         }} />
         {isToShowErrorMessage
           && <span>This value is not valid, put a number between 1 and 1000</span>}
