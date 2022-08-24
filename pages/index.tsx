@@ -1,6 +1,6 @@
-import CalculatorResponse from "@/components/CalculatorResponse/CalculatorResponse";
-import InputComponent from "@/components/Input/Input";
-import { Main, Content } from "@/styles/global";
+import CalculatorResponse from "../components/CalculatorResponse/CalculatorResponse";
+import InputComponent from "../components/Input/Input";
+import { Main, Content } from "../styles/global";
 import { ReactElement, useState } from "react";
 
 const CalculatorIntegerToRomanNumeral = (): ReactElement => {

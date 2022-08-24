@@ -8,19 +8,20 @@ const InputComponent = (
     inputValue,
     setInputValue
   }: InputComponentProps): ReactElement => {
-  const [isToShowErrorMessage, setIsToShowErrorMessage] = useState(false)
+  const [isToShowErrorMessage, setIsToShowErrorMessage] = useState(!inputValueIsValid(inputValue))
   return (
     <Container>
       <input
         type={"number"}
         placeholder="Please insert a integer number"
         value={inputValue}
+        data-testid="inputComponent"
         onChange={(currentValue) => {
           setInputValue(currentValue.target.value)
           setIsToShowErrorMessage(!inputValueIsValid(currentValue.target.value))
         }} />
         {isToShowErrorMessage
-          && <span>This value is not valid, put a number between 1 and 1000</span>}
+          && <span data-testid="spanErrorMessage">This value is not valid, put a number between 1 and 1000</span>}
     </Container>
   );
 }

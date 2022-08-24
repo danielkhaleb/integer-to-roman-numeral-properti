@@ -9,7 +9,7 @@ const CalculatorResponse = (
   const romanNumber = convertNumberToRomanNumber(inputValue)
   return (
     <>
-      {romanNumber && <span>
+      {romanNumber && <span data-testid="spanResultMessage">
         Result: <b>{romanNumber}</b>
       </span>}
     </>
