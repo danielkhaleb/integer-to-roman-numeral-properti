@@ -1,29 +1,22 @@
-# Next.js + Jest
+# :chart_with_upwards_trend: Convert conventional number to roman number
 
-This example shows how to configure Jest to work with Next.js.
+- This project have been write in React with NextJs, in this project you should put a number between 1 and 1000 and the system will return your value in a roman number
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+## :hammer: Install the packages and dependencies
 
-## How to Use
+- Run : `yarn or npm install`
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
+## :desktop_computer: Running the application locally
 
-In your terminal, run the following command:
+- Run the application: `yarn dev or npm run dev`
+- Access the application on `localhost:3000`
 
-```bash
-npx create-next-app --example with-jest with-jest-app
-```
+### :test_tube: Running tests
 
-```bash
-yarn create next-app --example with-jest with-jest-app
-```
+- To run the complete test suite: `yarn test or npm run dev`
+- reference link: `https://jestjs.io/docs/getting-started/`
 
-```bash
-pnpm create next-app --example with-jest with-jest-app
-```
+### :vertical_traffic_light: Running code analyzer (linter)
 
-## Run Jest Tests
-
-```bash
-npm test
-```
+- Simply run `yarn lint or npm run lint` command and it will point any code changes that need to
+be made.
