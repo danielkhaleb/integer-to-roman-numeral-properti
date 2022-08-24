@@ -1,5 +1,3 @@
-import { CheckIfIsToShowMessageErrorProps } from "interfaces/input.interface"
-
 export const validateInputValue = (inputValue: string): boolean => {
   if (!inputValue) return true
     const inputValueNumber = parseInt(inputValue);
