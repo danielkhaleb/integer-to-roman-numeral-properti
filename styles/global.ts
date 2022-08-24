@@ -1,5 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -33,13 +32,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, select, button, span {
-      font: 400 1rem "Roboto", sans-serif;
+      font: 400 1rem 'Roboto', sans-serif;
   }
 
   span {
     color: var(--result);
   }
-`;
+`
 
 export const Main = styled.main`
   display: flex;
@@ -47,7 +46,7 @@ export const Main = styled.main`
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 2rem;
-`;
+`
 
 export const Content = styled.section`
   max-width: 720px;
@@ -57,4 +56,3 @@ export const Content = styled.section`
   height: 120px;
   justify-content: space-around;
 `
-

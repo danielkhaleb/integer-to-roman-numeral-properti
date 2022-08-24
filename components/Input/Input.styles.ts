@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.section`
   display: flex;
@@ -13,5 +13,4 @@ export const Container = styled.section`
   span {
     padding-top: 1px;
   }
-`;
-
+`
