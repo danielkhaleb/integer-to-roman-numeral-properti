@@ -1,13 +1,15 @@
+import CalculatorResponse from "@/components/CalculatorResponse/CalculatorResponse";
 import InputComponent from "@/components/Input/Input";
 import { ReactElement, useState } from "react";
 
 const CalculatorIntegerToRomanNumeral = (): ReactElement => {
-  const [valueInput, setValueInput] = useState('')
+  const [inputValue, setValueInput] = useState('')
   return (
     <>
       <InputComponent
-        inputValue={valueInput}
+        inputValue={inputValue}
         setInputValue={(inputValueParam) => setValueInput(inputValueParam)} />
+      <CalculatorResponse inputValue={inputValue}  />
     </>
   );
 }
